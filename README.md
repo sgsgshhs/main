@@ -1,6 +1,6 @@
 
 <div align="center">
-  <h1>OURIN BAILEYS</h1>
+  <h1>MYAI BAILEYS</h1>
   <img src="https://files.catbox.moe/4n0efj.jpg" alt="Thumbnail" width='100%' />
 </div>
 
@@ -28,25 +28,25 @@ Baileys is a fork from github https://github.com/Nted3xec/baileys
 Tag/Label Member Grop
 
 ```javascript
-await ourin.setLabelGroup(jid, string)
+await myai.setLabelGroup(jid, string)
 ```
 ---
 ### Delay
 Sleep code ( hehe )
 
 ```javascript
-await ourin.delay(seconds) // ex. 3 ( 3 seconds )
+await myai.delay(seconds) // ex. 3 ( 3 seconds )
 // example
-await ourin.delay(3)
+await myai.delay(3)
 ```
 ---
 ### React Message
 Send Reaction into the Message
 
 ```javascript
-await ourin.react(m, emoji) 
+await myai.react(m, emoji) 
 // Example 
-await ourin.react(m, "😚") 
+await myai.react(m, "😚") 
 ```
 ---
 ### Delete React Message
@@ -54,14 +54,14 @@ Delete Reaction into the Message
 
 ```javascript
 // Example 
-await ourin.unreact(m) 
+await myai.unreact(m) 
 ```
 ---
 ### Check ID Channel / Newsletter / Saluran
 Get ID Channel From Url
 
 ```javascript
-await ourin.cekIDSaluran(url)
+await myai.cekIDSaluran(url)
 ```
 Result JSON
 ```json
@@ -81,24 +81,24 @@ Result JSON
 Just one line, not use array, just string with space " "
 
 ```javascript
-await ourin.newsletterMultipleFollow(jids)
+await myai.newsletterMultipleFollow(jids)
 // Example
-await ourin.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
+await myai.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
 ```
 ---
 ### Check banned number
 You can see the status of blocked numbers here 
 
 ```javascript
-ourin.checkBanned(jid)
+myai.checkBanned(jid)
 ```
 ---
 ### Edit Message
 Edit your previously sent message
 ```js
-await ourin.edit(m, newText)
+await myai.edit(m, newText)
 // Example
-await ourin.edit(m, "this is edited message")
+await myai.edit(m, "this is edited message")
 ```
 Notes
 - Only works for messages sent by yourself
@@ -107,9 +107,9 @@ Notes
 ### Delete / Revoke Message
 Delete or revoke a message
 ```js
-await ourin.del(m)
+await myai.del(m)
 // Example
-await ourin.del(m)
+await myai.del(m)
 ```
 
 Notes
@@ -121,9 +121,9 @@ Notes
 ### Detect Message
 Detect message type from incoming message object.
 ```js
-ourin.detect(m)
+myai.detect(m)
 // Example
-const type = ourin.detect(m)
+const type = myai.detect(m)
 if (type === 'image') {
     // handle image message
 }
@@ -160,14 +160,14 @@ Status Mention Group & Private Message
 Send Status Mention Group/Private Chat
 
 ```javascript
-await ourin.sendStatusMention(content, jid);
+await myai.sendStatusMention(content, jid);
 ```
 
 ### Status Group Message V2
 Send Group Status With Version 2 
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
      groupStatusMessage: {
           text: "Hello World"
      }
@@ -178,7 +178,7 @@ await ourin.sendMessage(jid, {
 Send multiple images in a single album message:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await myai.sendMessage(jid, { 
     albumMessage: [
         { image: buffer, caption: "Foto pertama" },
         { image: { url: "URL IMAGE" }, caption: "Foto kedua" }
@@ -190,7 +190,7 @@ await ourin.sendMessage(jid, {
 Create and send WhatsApp event invitations:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await myai.sendMessage(jid, { 
     eventMessage: { 
         isCanceled: false, 
         name: "Hello World", 
@@ -212,7 +212,7 @@ await ourin.sendMessage(jid, {
 Display poll results with vote counts:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await myai.sendMessage(jid, { 
     pollResultMessage: { 
         name: "Hello World", 
         pollVotes: [
@@ -233,11 +233,11 @@ await ourin.sendMessage(jid, {
 Send basic interactive messages with copy button functionality:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "MYAI MD",
         buttons: [
             {
                 name: "cta_copy",
@@ -256,17 +256,17 @@ await ourin.sendMessage(jid, {
 Send interactive messages with buttons, copy actions, and native flow features:
 
 ```javascript
-await ourin.sendMessage(jid, {    
+await myai.sendMessage(jid, {    
     interactiveMessage: {      
         header: "Hello World",
         title: "Hello World",      
-        footer: "OURIN MD",      
+        footer: "MYAI MD",      
         image: { url: "https://example.com/image.jpg" },      
         nativeFlowMessage: {        
             messageParamsJson: JSON.stringify({          
                 limited_time_offer: {            
                     text: "idk hummmm?",            
-                    url: "https://ourin.site",            
+                    url: "https://myai.site",            
                     copy_code: "zanxnpc",            
                     expiration_time: Date.now() * 999          
                 },          
@@ -279,7 +279,7 @@ await ourin.sendMessage(jid, {
                 tap_target_configuration: {            
                     title: " X ",            
                     description: "bomboclard",            
-                    canonical_url: "https://ourin.site",            
+                    canonical_url: "https://myai.site",            
                     domain: "shop.example.com",            
                     button_index: 0          
                 }        
@@ -335,11 +335,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with thumbnail image and copy button:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "MYAI MD",
         image: { url: "https://example.com/image.jpg" },
         buttons: [
             {
@@ -359,7 +359,7 @@ await ourin.sendMessage(jid, {
 Send product catalog messages with buttons and merchant information:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     productMessage: {
         title: "Produk Contoh",
         description: "Ini adalah deskripsi produk",
@@ -388,11 +388,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "MYAI MD",
         document: fs.readFileSync("./package.json"),
         mimetype: "application/pdf",
         fileName: "saweitt.pdf",
@@ -403,12 +403,12 @@ await ourin.sendMessage(jid, {
             isForwarded: false
         },
         externalAdReply: {
-            title: "OURIN MD",
+            title: "MYAI MD",
             body: "Zann",
             mediaType: 3,
             thumbnailUrl: "https://example.com/image.jpg",
             mediaUrl: " X ",
-            sourceUrl: "https://ourin.site",
+            sourceUrl: "https://myai.site",
             showAdAttribution: true,
             renderLargerThumbnail: false         
         },
@@ -417,8 +417,8 @@ await ourin.sendMessage(jid, {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
                     display_text: "Telegram",
-                    url: "https://ourin.site",
-                    merchant_url: "https://ourin.site"
+                    url: "https://myai.site",
+                    merchant_url: "https://myai.site"
                 })
             }
         ]
@@ -430,11 +430,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) without contextInfo and externalAdReply - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "MYAI MD",
         document: fs.readFileSync("./package.json"),
         mimetype: "application/pdf",
         fileName: "saweitt.pdf",
@@ -444,8 +444,8 @@ await ourin.sendMessage(jid, {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
                     display_text: "Telegram",
-                    url: "https://ourin.site",
-                    merchant_url: "https://ourin.site"
+                    url: "https://myai.site",
+                    merchant_url: "https://myai.site"
                 })
             }
         ]
@@ -460,7 +460,7 @@ Send payment request messages with custom background and sticker:
 let quotedType = m.quoted?.mtype || '';
 let quotedContent = JSON.stringify({ [quotedType]: m.quoted }, null, 2);
 
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     requestPaymentMessage: {
         currency: "IDR",
         amount: 10000000,
@@ -484,7 +484,7 @@ await ourin.sendMessage(jid, {
 Send a carousel message with multiple cards:
 
 ```javascript
-await ourin.sendMessage(
+await myai.sendMessage(
     jid,
     {
         text: 'Body Message',
@@ -545,10 +545,10 @@ await ourin.sendMessage(
 Send a sticker pack with multiple stickers in one message:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await myai.sendMessage(jid, {
     stickerPack: {
         name: "My Sticker Pack",
-        publisher: "OURIN MD",
+        publisher: "MYAI MD",
         description: "Custom sticker pack",
         cover: { url: "https://example.com/cover.png" },
         stickers: [
@@ -577,38 +577,38 @@ Lightweight media processing functions built directly into the socket. Uses `sha
 Fast image resize with aspect ratio preserved
 
 ```javascript
-const resized = await ourin.resize(buffer, 200, 200)
+const resized = await myai.resize(buffer, 200, 200)
 ```
 ---
 ### Convert
 Convert media format — supports `jpeg`, `jpg`, `png`, `webp`, `mp3`, `mp4`
 
 ```javascript
-const mp4 = await ourin.convert(buffer, { to: "mp4" })
-const webp = await ourin.convert(buffer, { to: "webp" })
-const mp3 = await ourin.convert(buffer, { to: "mp3" })
+const mp4 = await myai.convert(buffer, { to: "mp4" })
+const webp = await myai.convert(buffer, { to: "webp" })
+const mp3 = await myai.convert(buffer, { to: "mp3" })
 ```
 ---
 ### To Sticker
 Convert any image to WhatsApp sticker format (512x512 WebP with transparency)
 
 ```javascript
-const sticker = await ourin.toSticker(buffer)
-const sticker = await ourin.toSticker(buffer, { quality: 90 })
+const sticker = await myai.toSticker(buffer)
+const sticker = await myai.toSticker(buffer, { quality: 90 })
 ```
 ---
 ### Compress
 Compress media with quality control — auto-detects image or video
 
 ```javascript
-const compressed = await ourin.compress(buffer, { quality: 50 })
+const compressed = await myai.compress(buffer, { quality: 50 })
 ```
 ---
 ### Metadata
 Extract media metadata — auto-detects image (sharp) or video/audio (ffprobe)
 
 ```javascript
-const info = await ourin.metadata(buffer)
+const info = await myai.metadata(buffer)
 ```
 
 Result JSON
